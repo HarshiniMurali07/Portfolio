@@ -103,16 +103,73 @@
             margin-bottom: 2rem;
             color: #007BFF;
         }
-        .projects {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
-        }
-        .project img {
-            max-width: 100%;
-            border-radius: 10px;
-            margin-bottom: 1rem;
-        }
+        /* Projects Section */
+#projects {
+    background: #f9f9f9;
+    padding: 3rem 2rem;
+    text-align: center;
+}
+
+#projects h2 {
+    font-size: 2.5rem;
+    color: #007BFF;
+    margin-bottom: 2rem;
+}
+
+.project {
+    margin-bottom: 2rem;
+    text-align: left;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 1.5rem;
+    background: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.project h3 {
+    font-size: 1.8rem;
+    color: #007BFF;
+    margin-bottom: 1rem;
+}
+
+.project p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+.project-visualization {
+    margin: 1rem 0;
+    text-align: center;
+}
+
+.project-visualization img {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.project-visualization p {
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 0.5rem;
+}
+
+.download-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: #007BFF;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.download-btn:hover {
+    background: #0056b3;
+}
+        
         .animation-section {
             margin: 2rem 0;
             text-align: center;
@@ -370,14 +427,32 @@
         <h2>Projects</h2>
 
         <div class="project">
-            <h3>1. Exploratory Data Analysis (EDA)</h3>
+            <h3>Chronic Kidney Disease Clustering Analysis (EDA)</h3>
+            <p>This project applies advanced clustering techniques, including K-Means, Hierarchical Clustering, DBSCAN, Gaussian Mixture Models (GMM), and Agglomerative Clustering, 
+            to analyze chronic kidney disease (CKD) data. The goal is to group patients based on clinical features and uncover patterns related to CKD stages. 
+            The results provide insights into patient severity levels and help prioritize high-risk cases.</p>
+            <!-- Visualization: Elbow Method -->
+        <div class="project-visualization">
+            <img src="elbow.png" alt="Elbow Method Plot">
+            <p>Figure 1: Elbow Method to determine the optimal number of clusters.</p>
+        </div>
+
+        <!-- Visualization: PCA Clusters -->
+        <div class="project-visualization">
+            <img src="k-means.png" alt="Cluster Visualization with PCA">
+            <p>Figure 2: PCA visualization of clusters formed by K-Means clustering.</p>
+        </div>
+
+        <!-- Visualization: Hierarchical Clustering Dendrogram -->
+        <div class="project-visualization">
+            <img src="dendogram.png" alt="Hierarchical Clustering Dendrogram">
+            <p>Figure 3: Dendrogram for hierarchical clustering, showcasing relationships between clusters.</p>
+        </div>
+
+        <!-- Download Button -->
+        <a href="assets/projects/ckd/project_notebook.ipynb" download class="download-btn">Download Project Notebook</a>
             <img src="eda_histogram.png" alt="EDA Histogram">
-            <p>
-                This project focused on performing exploratory data analysis (EDA) on a complex dataset. Key tasks included
-                analyzing distributions, identifying outliers, and uncovering trends. Visualizations such as histograms
-                and scatter plots provided insights into the underlying patterns. EDA helped in transforming raw data into
-                a cleaned format suitable for machine learning.
-            </p>
+           
         </div>
 
         <div class="project">
@@ -482,13 +557,13 @@
 <!-- Line Graph Container -->
     <div class="line-graph">
         <!-- Programming -->
-        <div class="skill-point" >
+        <div class="skill-point programming" >
             <span class="skill-name">Python</span>
         </div>
-        <div class="skill-point" >
+        <div class="skill-point programming" >
             <span class="skill-name">R</span>
         </div>
-        <div class="skill-point" >
+        <div class="skill-point programming" >
             <span class="skill-name">SQL</span>
         </div>
          <!-- Visualization -->
