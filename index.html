@@ -166,82 +166,106 @@
     line-height: 1.6;
     color: #666;
     }
-    /* Skills Section Styling */
-#skills {
-    background: #f4f4f9;
-    padding: 3rem 2rem;
-    text-align: center;
-}
+    /* Skills Section */
+        #skills {
+            background: #f4f4f9;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
 
-#skills h2 {
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
-    color: #007BFF;
-}
+        #skills h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: #007BFF;
+        }
 
-/* Line Graph Styling */
-.line-graph {
-    position: relative;
-    width: 90%;
-    height: 100px;
-    margin: 2rem auto;
-    border-bottom: 2px solid #007BFF;
-}
+        /* Filter Menu */
+        .filter-menu {
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
 
-/* Skill Points */
-.skill-point {
-    text-align: center;
-    botton: 0;
-    position: absolute;
-    transform: translateX(-50%); /* Optional for hover effects */
-}
+        .filter-btn {
+            padding: 8px 15px;
+            background: #f0f0f0;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            color: #333;
+            transition: background 0.3s ease;
+        }
 
-.skill-point::before {
-    content: '';
-    width: 12px;
-    height: 12px;
-    background: #007BFF;
-    border-radius: 50%;
-    display: block;
-    margin: 0 auto 10px auto;
-}
+        .filter-btn:hover {
+            background: #007BFF;
+            color: #fff;
+        }
 
-/* Connecting Arrows */
-.skill-point::after {
-    content: '';
-    position: absolute;
-    bottom: 6px;
-    left: 50%;
-    width: 40px;
-    height: 2px;
-    background: #007BFF;
-    transform: translateX(50%);
-    z-index: -1;
-}
+        .filter-btn.active {
+            background: #007BFF;
+            color: #fff;
+        }
 
-.skill-point:last-child::after {
-    content: ''; /* Remove arrow for the last skill point */
-    display: none;
-}
+        /* Line Graph */
+        .line-graph {
+            position: relative;
+            width: 90%;
+            height: 100px;
+            margin: 2rem auto;
+            border-bottom: 2px solid #007BFF;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
 
-/* Skill Names */
-.skill-name {
-    font-size: 0.9rem;
-    color: #333;
-}
+        /* Skill Points */
+        .skill-point {
+            position: relative;
+            text-align: center;
+            transform: translateX(-50%);
+        }
 
-/* Hover Effect for Skill Points */
-.skill-point:hover::before {
-    background: #FF6347;
-    transform: scale(1.3);
-    transition: 0.3s ease;
-}
+        .skill-point::before {
+            content: '';
+            width: 15px;
+            height: 15px;
+            background: #007BFF;
+            border-radius: 50%;
+            display: block;
+            margin: 0 auto 10px auto;
+        }
 
-.skill-point:hover .skill-name {
-    color: #FF6347;
-    font-weight: bold;
-}
+        .skill-name {
+            font-size: 1rem;
+            color: #333;
+        }
 
+        /* Hover Effects */
+        .skill-point:hover::before {
+            background: #FF6347;
+            transform: scale(1.2);
+            transition: 0.3s ease;
+        }
+
+        .skill-point:hover .skill-name {
+            color: #FF6347;
+            font-weight: bold;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .line-graph {
+                flex-wrap: wrap;
+                height: auto;
+                border-bottom: none;
+            }
+
+            .skill-point {
+                margin-bottom: 20px;
+            }
+        }
     
 .download-btn {
     display: inline-block;
@@ -448,7 +472,7 @@
     </div>
 <!-- Line Graph Container -->
     <div class="line-graph">
-        <!-- Skill Points -->
+        <!-- Programming -->
         <div class="skill-point" style="left: 5%;">
             <span class="skill-name">Python</span>
         </div>
@@ -458,17 +482,61 @@
         <div class="skill-point" style="left: 35%;">
             <span class="skill-name">SQL</span>
         </div>
-        <div class="skill-point" style="left: 50%;">
-            <span class="skill-name">Java</span>
+         <!-- Visualization -->
+        <div class="skill-point visualization" style="left: 25%;">
+            <span class="skill-name">Tableau</span>
+        </div>
+        <div class="skill-point visualization" style="left: 35%;">
+            <span class="skill-name">Power BI</span>
+        </div>
+        <div class="skill-point visualization" style="left: 45%;">
+            <span class="skill-name">Interactive Visualizations</span>
+        </div>
+        <div class="skill-point visualization" style="left: 55%;">
+            <span class="skill-name">Geospatial Visualizations</span>
+        </div>
+        <div class="skill-point visualization" style="left: 65%;">
+            <span class="skill-name">Advanced Charting</span>
+        </div>
+        <div class="skill-point visualization" style="left: 75%;">
+            <span class="skill-name">Data Storytelling</span>
+        </div>
+        <div class="skill-point visualization" style="left: 85%;">
+            <span class="skill-name">Time-Series Plots</span>
         </div>
         <div class="skill-point" style="left: 65%;">
             <span class="skill-name">TensorFlow</span>
         </div>
-        <div class="skill-point" style="left: 80%;">
-            <span class="skill-name">Tableau</span>
-        </div>
         <div class="skill-point" style="left: 95%;">
             <span class="skill-name">Seaborn</span>
+        </div>
+        <!-- Machine Learning -->
+        <div class="skill-point ml" style="left: 25%;">
+            <span class="skill-name">Supervised Learning</span>
+        </div>
+        <div class="skill-point ml" style="left: 35%;">
+            <span class="skill-name">Unsupervised Learning</span>
+        </div>
+        <div class="skill-point ml" style="left: 45%;">
+            <span class="skill-name">Clustering</span>
+        </div>
+        <div class="skill-point ml" style="left: 55%;">
+            <span class="skill-name">Deep Learning</span>
+        </div>
+        <div class="skill-point ml" style="left: 65%;">
+            <span class="skill-name">NLP</span>
+        </div>
+        <div class="skill-point ml" style="left: 75%;">
+            <span class="skill-name">Model Optimization</span>
+        </div>
+        <div class="skill-point ml" style="left: 85%;">
+            <span class="skill-name">Ensemble Methods</span>
+        </div>
+        <div class="skill-point ml" style="left: 95%;">
+            <span class="skill-name">Time Series Analysis</span>
+        </div>
+        <div class="skill-point ml" style="left: 105%;">
+            <span class="skill-name">Model Deployment</span>
         </div>
     
 
