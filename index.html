@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Harshini's Portfolio</title>
-    <script>src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-    
+    <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+
     <style>
         /*Reset and Basic Styling  */
          {
@@ -18,8 +18,27 @@
             font-family: 'Arial', sans-serif;
             background: #f9f9f9;
             color: #333;
-            position: relative;
             overflow-x: hidden;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background: #f9f9f9;
+            color: #333;
+            margin: 0;
+            overflow-x: hidden;
+        }
+        section {
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+        .background-animation {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.2;
         }
         a {
             text-decoration: none;
@@ -30,16 +49,7 @@
             color: #0056b3;
         }
 
-        /* Lottie Background */
-        .lottie-bg {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-            opacity: 0.3;
-        }
+        
 
         header {
             position: relative;
@@ -54,11 +64,17 @@
             z-index: 1;
         }
         header img {
-            width: 150px;
-            height: 150px;
+            width: 180px;
+            height: 180px;
             border-radius: 50%;
-            border: 5px solid white;
+            border: 8px solid white;
             margin: 1rem auto;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        header img:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
         }
         nav {
             position: sticky;
@@ -112,8 +128,17 @@
     </style>
 </head>
 <body>
-    <!-- Lottie Background -->
-    <lottie-player class="lottie-bg" autoplay loop mode="normal" src="https://lottie.host/8291107d-576b-496e-9594-57b258464d3a/oJJFUabPgh.lottie"></lottie-player>
+    <div class="background-animation">
+    <dotlottie-player 
+        src="https://lottie.host/7e638c36-aaaf-43f4-a344-2ac8fe1ebf1e/11IHaGoPGE.lottie" 
+        background="transparent" 
+        speed="1" 
+        style="width: 100%; height: 100%;" 
+        loop 
+        autoplay>
+    </dotlottie-player>
+</div>
+
 
     <header>
         <h1>Welcome to My Portfolio</h1>
@@ -147,10 +172,6 @@
             I am passionate about leveraging data-driven approaches to solve real-world problems and am committed to continuous
             learning and professional growth in the ever-evolving field of machine learning.
         </p>
-    </section>
-    <section class="animation-section">
-        <lottie-player autoplay loop mode="normal" src="https://lottie.host/ccdb5c39-4664-4e1b-a1d5-af35e3c94b31/0xHlLqwnrW.lottie" style="width: 300px; margin: auto;"></lottie-player>
-        <p>This animation highlights my skills and expertise in Machine Learning and AI.</p>
     </section>
     <section id="education">
     <h2>Education</h2>
@@ -221,6 +242,56 @@
             </p>
         </div>
     </section>
+    <section id="services">
+    <h2>Services</h2>
+    <div class="services-container">
+        <!-- Service 1 -->
+        <div class="service-item">
+            <img src="machin.png" alt="Machine Learning Icon">
+            <h3>Machine Learning</h3>
+            <p>Designing and developing predictive models to extract actionable insights from complex datasets.  
+                Specializing in supervised and unsupervised learning techniques to solve classification, regression,  
+                and clustering problems. Expertise in libraries like TensorFlow, PyTorch, and Scikit-learn.  
+                Leveraging hyperparameter tuning and model optimization to improve performance.  
+                Implementing scalable ML pipelines for real-world applications in diverse domains.  
+                Delivering solutions tailored to meet client requirements and business goals.</p>
+        </div>
+        <!-- Service 2 -->
+        <div class="service-item">
+            <img src="datavl.png" alt="Data Visualization Icon">
+            <h3>Data Visualization</h3>
+            <p>Crafting visually compelling dashboards and charts to represent complex data effectively.  
+                Utilizing tools like Matplotlib, Seaborn, and Tableau to uncover insights.  
+                Developing interactive visuals for better data storytelling and decision-making.  
+                Simplifying trends and relationships in data through meaningful visual summaries.  
+                Focusing on creating user-friendly and intuitive designs tailored to audience needs.  
+                Delivering actionable insights for stakeholders by making data accessible and comprehensible.</p>
+        </div>
+        <!-- Service 3 -->
+        <div class="service-item">
+            <img src="product.png" alt="Recommendation Systems Icon">
+            <h3>Recommendation Systems</h3>
+            <p>Building recommendation engines to enhance user engagement and retention.  
+                Leveraging collaborative and content-based filtering techniques for accurate predictions.  
+                Applying matrix factorization methods for handling sparse datasets efficiently.  
+                Tailoring algorithms to personalize product, content, or service recommendations.  
+                Measuring success through precision, recall, and other evaluation metrics.  
+                Delivering scalable solutions to meet user preferences across industries.</p>
+        </div>
+        <!-- Service 4 -->
+        <div class="service-item">
+            <img src="analytics.png" alt="Exploratory Data Analysis Icon">
+            <h3>Data Analysis</h3>
+            <p>Performing detailed exploratory data analysis to uncover trends and insights.  
+                Cleaning and preprocessing data to ensure its accuracy and reliability for analysis.  
+                Conducting statistical analysis to evaluate relationships between variables.  
+                Creating insightful visualizations like histograms, scatter plots, and heatmaps.  
+                Using feature engineering techniques to prepare datasets for advanced modeling.  
+                Helping clients make informed decisions through in-depth data understanding.</p>
+        </div>
+    </div>
+</section>
+
 
     <section id="skills">
         <h2>Skills</h2>
@@ -237,6 +308,7 @@
             <li>Data Preprocessing</li>
         </ul>
     </section>
+    
 
     <section id="contact">
         <h2>Contact</h2>
