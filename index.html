@@ -171,7 +171,6 @@
     background: #f4f4f9;
     padding: 3rem 2rem;
     text-align: center;
-    position: relative;
 }
 
 #skills h2 {
@@ -187,21 +186,14 @@
     height: 100px;
     margin: 2rem auto;
     border-bottom: 2px solid #007BFF;
-    display: flex;
-    justify-content: space-between;
-    align-items:center;
-    overflow: hidden;
 }
 
 /* Skill Points */
 .skill-point {
     text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-    transform: translateY(0); /* Optional for hover effects */
-    transition: transform 0.3s ease;
+    botton: 0;
+    position: absolute;
+    transform: translateX(-50%); /* Optional for hover effects */
 }
 
 .skill-point::before {
@@ -210,21 +202,45 @@
     height: 12px;
     background: #007BFF;
     border-radius: 50%;
-    display: inline-block;
-    margin-bottom: 5px;
+    display: block;
+    margin: 0 auto 10px auto;
 }
 
+/* Connecting Arrows */
+.skill-point::after {
+    content: '';
+    position: absolute;
+    bottom: 6px;
+    left: 50%;
+    width: 40px;
+    height: 2px;
+    background: #007BFF;
+    transform: translateX(50%);
+    z-index: -1;
+}
+
+.skill-point:last-child::after {
+    content: ''; /* Remove arrow for the last skill point */
+    display: none;
+}
+
+/* Skill Names */
 .skill-name {
     font-size: 0.9rem;
     color: #333;
-    margin-top: 10px;
-    
-}
-        /* Hover Effect */
-.skill-point:hover {
-    transform: translateY(-10px);
 }
 
+/* Hover Effect for Skill Points */
+.skill-point:hover::before {
+    background: #FF6347;
+    transform: scale(1.3);
+    transition: 0.3s ease;
+}
+
+.skill-point:hover .skill-name {
+    color: #FF6347;
+    font-weight: bold;
+}
 
     
 .download-btn {
@@ -430,41 +446,33 @@
         <button class="filter-btn" onclick="filterSkills('visualization')">Visualization</button>
         <button class="filter-btn" onclick="filterSkills('ml')">Machine Learning</button>
     </div>
-
-    <!-- Line Graph -->
+<!-- Line Graph Container -->
     <div class="line-graph">
-        <!-- Programming Languages -->
-        <div class="skill-point programming" style="left: 10%;">
+        <!-- Skill Points -->
+        <div class="skill-point" style="left: 5%;">
             <span class="skill-name">Python</span>
         </div>
-        <div class="skill-point programming" style="left: 20%;">
+        <div class="skill-point" style="left: 20%;">
             <span class="skill-name">R</span>
         </div>
-        <div class="skill-point programming" style="left: 30%;">
+        <div class="skill-point" style="left: 35%;">
             <span class="skill-name">SQL</span>
         </div>
-        <div class="skill-point programming" style="left: 40%;">
+        <div class="skill-point" style="left: 50%;">
             <span class="skill-name">Java</span>
         </div>
-
-        <!-- Machine Learning Tools -->
-        <div class="skill-point ml" style="left: 50%;">
+        <div class="skill-point" style="left: 65%;">
             <span class="skill-name">TensorFlow</span>
         </div>
-        <div class="skill-point ml" style="left: 60%;">
-            <span class="skill-name">PyTorch</span>
-        </div>
-        <div class="skill-point ml" style="left: 70%;">
-            <span class="skill-name">Scikit-learn</span>
-        </div>
-
-        <!-- Visualization Tools -->
-        <div class="skill-point visualization" style="left: 80%;">
+        <div class="skill-point" style="left: 80%;">
             <span class="skill-name">Tableau</span>
         </div>
-        <div class="skill-point visualization" style="left: 90%;">
+        <div class="skill-point" style="left: 95%;">
             <span class="skill-name">Seaborn</span>
         </div>
+    
+
+        
     </div>
 </section>
 
