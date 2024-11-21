@@ -6,13 +6,140 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Harshini's Portfolio</title>
     <style>
-        /* Basic styling omitted for brevity; reuse styles from the earlier version */
+        /*Reset and Basic Styling  */
+         * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to bottom, #f4f4f9, #e0e7ff);
+            color: #333;
+            line-height: 1.6;
+        }
+        a {
+            text-decoration: none;
+            color: #007BFF;
+            transition: color 0.3s;
+        }
+        a:hover {
+            color: #0056b3;
+        }
+        header {
+            background: linear-gradient(120deg, #007BFF, #00BFFF);
+            color: white;
+            text-align: center;
+            padding: 5rem 1rem;
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        header img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 5px solid white;
+            margin: 1rem auto;
+            display: block;
+        }
+        header h1 {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+        }
+        header p {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+        nav {
+            position: sticky;
+            top: 0;
+            background: white;
+            padding: 1rem 0;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+        nav a {
+            margin: 0 15px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        section {
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: auto;
+            text-align: center;
+        }
+        section h2 {
+            font-size: 2.8rem;
+            margin-bottom: 2rem;
+            color: #007BFF;
+        }
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        .project {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            padding: 2rem;
+            overflow: hidden;
+            border: 2px solid #f0f4ff;
+        }
+        .project:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            border-color: #007BFF;
+        }
+        .project img {
+            max-width: 100%;
+            border-radius: 10px;
+            margin-bottom: 1.5rem;
+            transition: transform 0.3s;
+        }
+        .project img:hover {
+            transform: scale(1.05);
+        }
+        .project h3 {
+            color: #007BFF;
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+        footer {
+            background: #007BFF;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 2rem;
+            clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+        }
+        footer p {
+            font-size: 1rem;
+            margin: 0.5rem 0;
+        }
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.5rem;
+            }
+            header img {
+                width: 120px;
+                height: 120px;
+            }
+        }
     </style>
 </head>
 <body>
     <header>
         <h1>Welcome to My Portfolio</h1>
         <p>Showcasing my journey in Machine Learning and Data Science</p>
+        <img src="profile.jpg" alt="Profile Photo">
+        <h1>Harshini Murali</h1>
+        <p>MSc Data Science | Machine Learning Enthusiast</p>
+        <p><a href="mailto:harshinihachu6@gmail.com">harshinihachu6@gmail.com</a> | <a href="https://github.com/HarshiniMurali07">GitHub</a> | <a href="https://www.linkedin.com/in/harshini-murali-744a68272/">LinkedIn</a></p>
     </header>
 
     <nav>
