@@ -5,18 +5,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Harshini's Portfolio</title>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    
     <style>
         /*Reset and Basic Styling  */
-         * {
+         {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
         body {
             font-family: 'Arial', sans-serif;
-            background: linear-gradient(to bottom, #f4f4f9, #e0e7ff);
+            background: #f9f9f9;
             color: #333;
-            line-height: 1.6;
+            position: relative;
+            overflow-x: hidden;
         }
         a {
             text-decoration: none;
@@ -26,13 +29,29 @@
         a:hover {
             color: #0056b3;
         }
+
+        /* Lottie Background */
+        .lottie-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.3;
+        }
+
         header {
+            position: relative;
+            height: 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
             background: linear-gradient(120deg, #007BFF, #00BFFF);
             color: white;
-            text-align: center;
-            padding: 5rem 1rem;
-            clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            z-index: 1;
         }
         header img {
             width: 150px;
@@ -40,15 +59,6 @@
             border-radius: 50%;
             border: 5px solid white;
             margin: 1rem auto;
-            display: block;
-        }
-        header h1 {
-            font-size: 3rem;
-            margin-bottom: 0.5rem;
-        }
-        header p {
-            font-size: 1.2rem;
-            margin-bottom: 1rem;
         }
         nav {
             position: sticky;
@@ -66,48 +76,30 @@
             letter-spacing: 1px;
         }
         section {
-            padding: 4rem 2rem;
+            padding: 3rem 2rem;
             max-width: 1200px;
             margin: auto;
             text-align: center;
+            position: relative;
         }
         section h2 {
-            font-size: 2.8rem;
+            font-size: 2.5rem;
             margin-bottom: 2rem;
             color: #007BFF;
         }
         .projects {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-        .project {
-            background: white;
-            border-radius: 15px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s, box-shadow 0.3s;
-            padding: 2rem;
-            overflow: hidden;
-            border: 2px solid #f0f4ff;
-        }
-        .project:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-            border-color: #007BFF;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
         }
         .project img {
             max-width: 100%;
             border-radius: 10px;
-            margin-bottom: 1.5rem;
-            transition: transform 0.3s;
-        }
-        .project img:hover {
-            transform: scale(1.05);
-        }
-        .project h3 {
-            color: #007BFF;
-            font-size: 1.8rem;
             margin-bottom: 1rem;
+        }
+        .animation-section {
+            margin: 2rem 0;
+            text-align: center;
         }
         footer {
             background: #007BFF;
@@ -115,24 +107,14 @@
             text-align: center;
             padding: 2rem;
             margin-top: 2rem;
-            clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
         }
-        footer p {
-            font-size: 1rem;
-            margin: 0.5rem 0;
-        }
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 2.5rem;
-            }
-            header img {
-                width: 120px;
-                height: 120px;
-            }
-        }
+
     </style>
 </head>
 <body>
+    <!-- Lottie Background -->
+    <lottie-player class="lottie-bg" autoplay loop mode="normal" src="https://lottie.host/8291107d-576b-496e-9594-57b258464d3a/oJJFUabPgh.lottie"></lottie-player>
+
     <header>
         <h1>Welcome to My Portfolio</h1>
         <p>Showcasing my journey in Machine Learning and Data Science</p>
@@ -166,6 +148,24 @@
             learning and professional growth in the ever-evolving field of machine learning.
         </p>
     </section>
+    <section class="animation-section">
+        <lottie-player autoplay loop mode="normal" src="https://lottie.host/ccdb5c39-4664-4e1b-a1d5-af35e3c94b31/0xHlLqwnrW.lottie" style="width: 300px; margin: auto;"></lottie-player>
+        <p>This animation highlights my skills and expertise in Machine Learning and AI.</p>
+    </section>
+    <section id="education">
+    <h2>Education</h2>
+    <div>
+        <img src="college_logo.png" alt="uoglogo.png" style="width: 50px; border-radius: 50%; vertical-align: middle;">
+        MSc in Data Science -University of Greenwich
+    </div>
+    <div>
+        <img src="college_logo.png" alt="uoglogo.png" style="width: 50px; border-radius: 50%; vertical-align: middle;">
+        Bachelor of Computer Application, SRM Arts and Science College
+    <div>
+        <img src="nsnlogo.png" alt="School Logo" style="width: 50px; border-radius: 50%; vertical-align: middle;">
+        NSN Memorial School 
+    </div>
+</section>
 
     <section id="projects">
         <h2>Projects</h2>
