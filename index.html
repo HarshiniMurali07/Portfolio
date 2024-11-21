@@ -216,12 +216,16 @@
             margin: 2rem auto;
             border-bottom: 2px solid #007BFF;
             display: flex;
+            align-items: flex-end;
             justify-content: space-between;
             position: relative;
         }
 
         /* Skill Points */
         .skill-point {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             position: relative;
             text-align: center;
         }
@@ -233,7 +237,7 @@
             background: #007BFF;
             border-radius: 50%;
             display: block;
-            margin: 0 auto 10px;
+            margin-bottom: 5px;
         }
 
         .skill-name {
@@ -256,7 +260,7 @@
         /* Responsive Design */
         @media (max-width: 768px) {
             .line-graph {
-                flex-direction: column;
+                flex-wrap: wrap;
                 height: auto;
                 border-bottom: none;
             }
