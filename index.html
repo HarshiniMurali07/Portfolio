@@ -217,14 +217,13 @@
             border-bottom: 2px solid #007BFF;
             display: flex;
             justify-content: space-between;
-            align-items: flex-end;
+            position: relative;
         }
 
         /* Skill Points */
         .skill-point {
             position: relative;
             text-align: center;
-            transform: translateX(-50%);
         }
 
         .skill-point::before {
@@ -234,7 +233,7 @@
             background: #007BFF;
             border-radius: 50%;
             display: block;
-            margin: 0 auto 10px auto;
+            margin: 0 auto 10px;
         }
 
         .skill-name {
@@ -257,7 +256,7 @@
         /* Responsive Design */
         @media (max-width: 768px) {
             .line-graph {
-                flex-wrap: wrap;
+                flex-direction: column;
                 height: auto;
                 border-bottom: none;
             }
@@ -473,69 +472,69 @@
 <!-- Line Graph Container -->
     <div class="line-graph">
         <!-- Programming -->
-        <div class="skill-point" style="left: 5%;">
+        <div class="skill-point" >
             <span class="skill-name">Python</span>
         </div>
-        <div class="skill-point" style="left: 20%;">
+        <div class="skill-point" >
             <span class="skill-name">R</span>
         </div>
-        <div class="skill-point" style="left: 35%;">
+        <div class="skill-point" >
             <span class="skill-name">SQL</span>
         </div>
          <!-- Visualization -->
-        <div class="skill-point visualization" style="left: 25%;">
+        <div class="skill-point visualization" >
             <span class="skill-name">Tableau</span>
         </div>
-        <div class="skill-point visualization" style="left: 35%;">
+        <div class="skill-point visualization" >
             <span class="skill-name">Power BI</span>
         </div>
-        <div class="skill-point visualization" style="left: 45%;">
+        <div class="skill-point visualization" >
             <span class="skill-name">Interactive Visualizations</span>
         </div>
-        <div class="skill-point visualization" style="left: 55%;">
+        <div class="skill-point visualization" >
             <span class="skill-name">Geospatial Visualizations</span>
         </div>
-        <div class="skill-point visualization" style="left: 65%;">
+        <div class="skill-point visualization" >
             <span class="skill-name">Advanced Charting</span>
         </div>
-        <div class="skill-point visualization" style="left: 75%;">
+        <div class="skill-point visualization" >
             <span class="skill-name">Data Storytelling</span>
         </div>
-        <div class="skill-point visualization" style="left: 85%;">
+        <div class="skill-point visualization" >
             <span class="skill-name">Time-Series Plots</span>
         </div>
-        <div class="skill-point" style="left: 65%;">
+        <div class="skill-point" >
             <span class="skill-name">TensorFlow</span>
         </div>
-        <div class="skill-point" style="left: 95%;">
+        <div class="skill-point" >
             <span class="skill-name">Seaborn</span>
         </div>
         <!-- Machine Learning -->
-        <div class="skill-point ml" style="left: 25%;">
+        <div class="skill-point ml" >
             <span class="skill-name">Supervised Learning</span>
         </div>
-        <div class="skill-point ml" style="left: 35%;">
+        <div class="skill-point ml" >
             <span class="skill-name">Unsupervised Learning</span>
         </div>
-        <div class="skill-point ml" style="left: 45%;">
+        <div class="skill-point ml" >
             <span class="skill-name">Clustering</span>
         </div>
-        <div class="skill-point ml" style="left: 55%;">
+        <div class="skill-point ml" >
             <span class="skill-name">Deep Learning</span>
         </div>
-        <div class="skill-point ml" style="left: 65%;">
+        <div class="skill-point ml" >
             <span class="skill-name">NLP</span>
         </div>
-        <div class="skill-point ml" style="left: 75%;">
+        <div class="skill-point ml" >
             <span class="skill-name">Model Optimization</span>
         </div>
-        <div class="skill-point ml" style="left: 85%;">
+        <div class="skill-point ml" >
             <span class="skill-name">Ensemble Methods</span>
         </div>
-        <div class="skill-point ml" style="left: 95%;">
+        <div class="skill-point ml" >
             <span class="skill-name">Time Series Analysis</span>
         </div>
-        <div class="skill-point ml" style="left: 105%;">
+        <div class="skill-point ml" >
             <span class="skill-name">Model Deployment</span>
         </div>
     
