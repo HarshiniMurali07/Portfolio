@@ -109,6 +109,56 @@
     padding: 3rem 2rem;
     text-align: center;
 }
+/* Carousel Styling */
+.carousel {
+    position: relative;
+    max-width: 800px;
+    margin: 20px auto;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-slide {
+    display: none; /* Hide all slides initially */
+    text-align: center;
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-slide:first-child {
+    display: block; /* Show the first slide */
+}
+
+/* Carousel Controls */
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.carousel-btn.prev {
+    left: 10px;
+}
+
+.carousel-btn.next {
+    right: 10px;
+}
+
+.carousel-btn:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
 
 #projects h2 {
     font-size: 2.5rem;
@@ -424,77 +474,49 @@
 </section>
 
     <section id="projects">
-        <h2>Projects</h2>
-
-        <div class="project">
-            <h3>Chronic Kidney Disease Clustering Analysis (EDA)</h3>
-            <p>This project applies advanced clustering techniques, including K-Means, Hierarchical Clustering, DBSCAN, Gaussian Mixture Models (GMM), and Agglomerative Clustering, 
-            to analyze chronic kidney disease (CKD) data. The goal is to group patients based on clinical features and uncover patterns related to CKD stages. 
-            The results provide insights into patient severity levels and help prioritize high-risk cases.</p>
-            <!-- Visualization: Elbow Method -->
-        <div class="project-visualization">
-            <img src="elbow.png" alt="Elbow Method Plot">
-            <p>Figure 1: Elbow Method to determine the optimal number of clusters.</p>
+        <h2>Projects Presentation</h2>
+        <p>
+        Explore the key details of the project through the following presentation slides. Click the arrows to navigate.
+        </p>
+        <!-- Carousel Container -->
+    <div class="carousel">
+        <div class="carousel-slide">
+            <img src="assets/projects/slides/p1ifvslnpktba1kpoun71350132s4-0.png alt="Slide 1">
         </div>
-
-        <!-- Visualization: PCA Clusters -->
-        <div class="project-visualization">
-            <img src="k-means.png" alt="Cluster Visualization with PCA">
-            <p>Figure 2: PCA visualization of clusters formed by K-Means clustering.</p>
+        <div class="carousel-slide">
+            <img src="assets/projects/slides/p1ifvslnpktba1kpoun71350132s4-1.png" alt="Slide 2">
         </div>
-
-        <!-- Visualization: Hierarchical Clustering Dendrogram -->
-        <div class="project-visualization">
-            <img src="dendogram.png" alt="Hierarchical Clustering Dendrogram">
-            <p>Figure 3: Dendrogram for hierarchical clustering, showcasing relationships between clusters.</p>
+        <div class="carousel-slide">
+            <img src="assets/projects/slides/" alt="Slide 1">
         </div>
-
-        <!-- Download Button -->
-        <a href="assets/projects/ckd/project_notebook.ipynb" download class="download-btn">Download Project Notebook</a>
-            <img src="eda_histogram.png" alt="EDA Histogram">
-           
+        <div class="carousel-slide">
+            <img src="assets/projects/slides/p1ifvslnpktba1kpoun71350132s4-2.png" alt="Slide 2">
         </div>
-
-        <div class="project">
-            <h3>2. Station Lines Visualization</h3>
-            <img src="station_lines.png" alt="Station Lines">
-            <p>
-                This project utilized data visualization techniques to plot multi-line graphs representing station lines. Each
-                line was styled with unique colors, making patterns easier to interpret. This project demonstrated
-                advanced use of visualization libraries such as Matplotlib and Seaborn to make data more intuitive and actionable.
-            </p>
+        <div class="carousel-slide">
+            <img src="assets/projects/slides/p1ifvslnpktba1kpoun71350132s4-3.png" alt="Slide 1">
         </div>
-
-        <div class="project">
-            <h3>3. Label Encoding for Categorical Data</h3>
-            <img src="label_encoding.png" alt="Label Encoding">
-            <p>
-                This project focused on preprocessing categorical data using label encoding. The aim was to convert non-numeric
-                data into numerical values, ensuring compatibility with machine learning algorithms. Visualizations
-                highlighted the distribution of categories before and after encoding, showcasing its impact on model performance.
-            </p>
+        <div class="carousel-slide">
+            <img src="assets/projects/slides/p1ifvslnpktba1kpoun71350132s4-4.png" alt="Slide 2">
         </div>
-
-        <div class="project">
-            <h3>4. Product Recommendation System</h3>
-            <img src="product_recommendation_scores.png" alt="Product Recommendations">
-            <p>
-                Built a product recommendation system using collaborative filtering techniques. The model utilized user-product
-                interaction data to suggest highly relevant items to individual users. The recommendation accuracy
-                and system performance were evaluated using metrics like precision and recall, visualized through bar and heatmap charts.
-            </p>
+        <div class="carousel-slide">
+            <img src="assets/projects/slides/p1ifvslnpktba1kpoun71350132s4-5.png" alt="Slide 1">
         </div>
-
-        <div class="project">
-            <h3>5. Missing Data Analysis</h3>
-            <img src="missing_data.png" alt="Missing Data">
-            <p>
-                This project focused on analyzing and handling missing data. The analysis included identifying features with missing values
-                and applying imputation techniques such as mean, median, and mode. Missing data patterns were visualized
-                to assess their impact on the dataset's integrity and downstream machine learning workflows.
-            </p>
+        <div class="carousel-slide">
+            <img src="assets/projects/slides/p1ifvslnpktba1kpoun71350132s4-6.png" alt="Slide 2">
         </div>
-    </section>
+        <div class="carousel-slide">
+            <img src="assets/projects/slides/p1ifvslnpktba1kpoun71350132s4-7.png" alt="Slide 1">
+        </div>
+        <div class="carousel-slide">
+            <img src="assets/projects/slides/p1ifvslnpktba1kpoun71350132s4-8.png alt="Slide 2">
+        </div>
+        <div class="carousel-slide">
+            <img src="assets/projects/slides/p1ifvslnpktba1kpoun71350132s4-9.pngalt="Slide 1">
+        </div>
+        <!-- Carousel Controls -->
+    <button class="carousel-btn prev" onclick="moveSlide(-1)">&#10094;</button>
+    <button class="carousel-btn next" onclick="moveSlide(1)">&#10095;</button>
+</section>
     <section id="services">
     <h2>Services</h2>
     <div class="services-container">
