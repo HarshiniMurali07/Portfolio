@@ -580,7 +580,12 @@
 </section>
     <!-- JavaScript Code -->
     <script>
+        document.querySelectorAll('.carousel').forEach((carousel) => {
         let currentSlide = 0;
+        const slides = carousel.querySelectorAll('.carousel-slide');
+        const prevButton = carousel.querySelector('.prev');
+        const nextButton = carousel.querySelector('.next');
+
 
         function moveSlide(direction) {
             const slides = document.querySelectorAll('.carousel-slide');
@@ -588,6 +593,10 @@
             currentSlide = (currentSlide + direction + slides.length) % slides.length; // Update slide index
             slides[currentSlide].style.display = 'block'; // Show the new slide
         }
+            // Attach event listeners to buttons
+    prevButton.addEventListener('click', () => showSlide(-1));
+    nextButton.addEventListener('click', () => showSlide(1));
+});
     </script>
     <section id="services">
     <h2>Services</h2>
