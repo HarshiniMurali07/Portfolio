@@ -526,6 +526,9 @@
         <div class="carousel-slide">
             <img src="p1ifvslnpktba1kpoun71350132s4-9.png" alt="Slide 10">
         </div>
+        <!-- Carousel Controls -->
+    <button class="carousel-btn prev" onclick="moveSlide(-1)">&#10094;</button>
+    <button class="carousel-btn next" onclick="moveSlide(1)">&#10095;</button>
     </div>
     
 <section id="project2">
@@ -568,36 +571,37 @@
         <div class="carousel-slide" style="display: none;">
             <img src="Chronic Diseases PPT_00012.png" alt="Slide 10">
         </div>
-    </div>
-    <!-- Carousel Controls -->
+         <!-- Carousel Controls -->
     <button class="carousel-btn prev" onclick="moveSlide(-1)">&#10094;</button>
     <button class="carousel-btn next" onclick="moveSlide(1)">&#10095;</button>
+    </div>
+   
 </section>
 
-        <!-- Carousel Controls -->
-    <button class="carousel-btn prev" onclick="moveSlide(-1)">&#10094;</button>
-    <button class="carousel-btn next" onclick="moveSlide(1)">&#10095;</button>
 </section>
-    <!-- JavaScript Code -->
-    <script>
-        document.querySelectorAll('.carousel').forEach((carousel) => {
-        let currentSlide = 0;
+  
+<!-- JavaScript for Carousel -->
+<script>
+    document.querySelectorAll('.carousel').forEach((carousel) => {
+        let currentSlide = 0; // Track the current slide for this specific carousel
         const slides = carousel.querySelectorAll('.carousel-slide');
         const prevButton = carousel.querySelector('.prev');
         const nextButton = carousel.querySelector('.next');
 
-
-        function moveSlide(direction) {
-            const slides = document.querySelectorAll('.carousel-slide');
+        function showSlide(direction) {
             slides[currentSlide].style.display = 'none'; // Hide the current slide
             currentSlide = (currentSlide + direction + slides.length) % slides.length; // Update slide index
             slides[currentSlide].style.display = 'block'; // Show the new slide
         }
-            // Attach event listeners to buttons
-    prevButton.addEventListener('click', () => showSlide(-1));
-    nextButton.addEventListener('click', () => showSlide(1));
-});
-    </script>
+
+        // Attach event listeners to the buttons for this specific carousel
+        if (prevButton && nextButton) {
+            prevButton.addEventListener('click', () => showSlide(-1));
+            nextButton.addEventListener('click', () => showSlide(1));
+        }
+    });
+</script>
+
     <section id="services">
     <h2>Services</h2>
     <div class="services-container">
